@@ -9,6 +9,6 @@ func Run() error {
 func main() {
 	fmt.Println("start the application")
 	if err := Run(); err != nil {
-		fmt.Println("Erro when start application")
+		fmt.Println("Error when start application")
 	}
 }
