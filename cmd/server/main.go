@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/majidehamide/gorest-api2.git/internal/database"
+	"github.com/majidehamide/gorest-api2/internal/database"
 )
 
 func Run() error {
@@ -12,12 +12,12 @@ func Run() error {
 	db, err := database.NewDatabase()
 
 	if err != nil {
-		fmt.Println("Could not connect to database")
+		fmt.Println("Could not connect to database : %w", err)
 		return err
 	}
 
 	if err := db.MigrateDB(); err != nil {
-		fmt.Println("Failed to migrate database")
+		fmt.Println("Failed to migrate database : %w", err)
 		return err
 	}
 	fmt.Println("Successfully connect to database")

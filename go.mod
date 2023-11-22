@@ -1,4 +1,4 @@
-module github.com/TutorialEdge/go-rest-api-course
+module github.com/majidehamide/gorest-api2
 
 go 1.15
 
